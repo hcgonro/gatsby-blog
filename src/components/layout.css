@@ -25,7 +25,9 @@ details,
 figcaption,
 figure,
 footer,
-header,
+header {
+  font-family: Ubuntu-Regular;
+}
 main,
 menu,
 nav,

@@ -1,14 +1,18 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./layout.css"
 
-const Header = ({ siteTitle }) => (
+//{siteTitle}
+
+const Header = () => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#252525`,
       marginBottom: `1.45rem`,
     }}
   >
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet"></link>
     <div
       style={{
         margin: `0 auto`,
@@ -20,11 +24,27 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
             textDecoration: `none`,
+            fontFamily: `Ubuntu`,
+            display: `flex`,
+            color: `white`,
           }}
         >
-          {siteTitle}
+          <div 
+            style={{
+              color: `#9370DB`,
+            }}
+          >
+            El
+          </div>
+            .programador.
+          <div 
+            style={{
+              color: `#FF7F50`,
+            }}
+          >
+            precario
+          </div>
         </Link>
       </h1>
     </div>
