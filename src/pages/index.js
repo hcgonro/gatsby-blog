@@ -12,22 +12,22 @@ const IndexPage = ({ data }) => {
   
   return (
     <Layout>
-      <SEO title="Blog Personal" lang="es" description="Blog de prueba de hcgonro"/>
+      <SEO title="El developer ocupado" lang="es" description="Blog de desarrollo de software"/>
       <div>
         {edges.map(edge => {
-          const { frontmatter } = edge.node;
-          return (
-						<div key={frontmatter.path}>
-							<Link to={frontmatter.path}>{frontmatter.title}</Link>
-							&nbsp;
-							<small>
-								{' '}
-								<em>published on</em> {frontmatter.date}
-							</small>
-							<p>{frontmatter.excerpt}</p>
-							<br />
-						</div>
-					);
+			const { frontmatter } = edge.node
+			return (
+				<div key={frontmatter.path}>
+					<Link to={frontmatter.path}>{frontmatter.title}</Link>
+					<br />
+					<small>
+						{' '}
+						<em>publicado el </em> <strong>{frontmatter.date}</strong>
+					</small>
+					<p>{frontmatter.excerpt}</p>
+					<br />
+				</div>
+			);
         })}
       </div>
     </Layout>
@@ -43,7 +43,7 @@ export const query = graphql`
 					id
 					frontmatter {
 						title
-						date(formatString: "MMMM DD, YYYY")
+						date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
 						path
 						tags
 						excerpt

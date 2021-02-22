@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Un programador ocupado`,
-    description: `Blog sobre programación general en español. Opiniones personales.`,
+    title: `El developer ocupado`,
+    description: `Blog sobre desarrollo web`,
     author: `@hcgonro`,
   },
   plugins: [
