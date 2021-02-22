@@ -1,0 +1,32 @@
+
+.header-class {
+    background: #252525;
+}
+
+.header-container {
+    margin: 0;
+    padding: 1.5em;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.header-link {
+    text-decoration: none;
+    font-family: Ubuntu;
+    display: flex;
+    font-size: 4.5vw;
+}
+
+.link-first {
+    color: #9370DB;
+}
+
+.link-second {
+    color: #FFFFFF;
+}
+
+.link-third {
+    color: #FF7F50;
+}

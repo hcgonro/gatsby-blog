@@ -1,45 +1,49 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Header from "../components/header"
 
 const Template = ({ data, pageContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
-    const html = data.markdownRemark.html;
-    const { next, prev } = pageContext;
+	const html = data.markdownRemark.html;
+	const { next, prev } = pageContext;
 
 	return (
-		<div>
-			<h1>{title}</h1>
-            <div>
-                <em>{date}</em>
-            </div>
-            <br />
-			<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-            <p>
-				{prev && (
-					<Link to={prev.frontmatter.path}>
-						{prev.frontmatter.title}{' '}
-						<span role="img" aria-label="point-left">
-							👈{' '}
-						</span>
+		<>
+			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+			<div>
+				<h1>{title}</h1>
+				<div>
+					<em>{date}</em>
+				</div>
+				<br />
+				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+				<p>
+					{prev && (
+						<Link to={prev.frontmatter.path}>
+							{prev.frontmatter.title}{' '}
+							<span role="img" aria-label="point-left">
+								👈{' '}
+							</span>
 						Previous
-					</Link>
-				)}
-			</p>
-			<p>
-				{next && (
-					<Link to={next.frontmatter.path}>
-						Next{' '}
-						<span role="img" aria-label="point-right">
-							👉
+						</Link>
+					)}
+				</p>
+				<p>
+					{next && (
+						<Link to={next.frontmatter.path}>
+							Next{' '}
+							<span role="img" aria-label="point-right">
+								👉
 						</span>
-						{next.frontmatter.title}
-					</Link>
-				)}
-			</p>
-		</div>
-	);
-};
+							{next.frontmatter.title}
+						</Link>
+					)}
+				</p>
+			</div>
+		</>
+	)
+}
 
 export const postQuery = graphql`
 	query($pathSlug: String!) {
@@ -53,7 +57,12 @@ export const postQuery = graphql`
 				excerpt
 			}
 		}
+		site {
+			siteMetadata {
+				title
+			}
+		}
 	}
-`;
+`
 
 export default Template;

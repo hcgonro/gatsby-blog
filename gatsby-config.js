@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `El programador precarizado`,
+    title: `Un programador ocupado`,
     description: `Blog sobre programación general en español. Opiniones personales.`,
     author: `@hcgonro`,
   },
