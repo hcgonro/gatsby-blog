@@ -1,5 +1,5 @@
 .post-container {
-    font-family: Roboto;
+    font-family: Ubuntu;
 }
 
 .post-title {
@@ -9,17 +9,27 @@
 }
 
 .post-title h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 0;
     padding-bottom: 3vw;
 }
 
 .post-author-date {
-    font-size: 4vw;
+    font-size: .8em;
     display: flex;
 }
 
 .post-author-date a {
     color: #a7cdde;
     margin: 0;
+}
+
+.blog-post {
+    padding: 6vw;
+    line-height: 1.4;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
 }
