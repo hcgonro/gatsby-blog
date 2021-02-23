@@ -1,7 +1,8 @@
 ---
 path: '/first-post'
 date: '2018-11-14'
-title: 'Hello World'
+title: 'Crear un .jar con parámetros personalizados'
+author: 'El developer ocupado'
 tags: ['gatsby', '2018']
 excerpt: 'Hello World with Gatsby and React'
 ---

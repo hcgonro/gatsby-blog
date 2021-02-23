@@ -1,20 +1,22 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Header from "../components/header"
+import "../styles/blogpost.css"
 
 const Template = ({ data, pageContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
+	const author = data.markdownRemark.frontmatter.author;
 	const html = data.markdownRemark.html;
 	const { next, prev } = pageContext;
 
 	return (
 		<>
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<div>
-				<h1>{title}</h1>
-				<div>
-					<em>{date}</em>
+			<div className="post-container">
+				<div className="post-title">
+					<h1>{title}</h1>
+					<div className="post-author-date"><Link to="/">{author}</Link><em>, {date}</em></div>
 				</div>
 				<br />
 				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
@@ -51,7 +53,8 @@ export const postQuery = graphql`
 			html
 			frontmatter {
 				title
-				date(formatString: "MMMM, DD, YYYY")
+				date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
+				author
 				path
 				tags
 				excerpt

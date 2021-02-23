@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
 					<br />
 					<small>
 						{' '}
-						<em>publicado el </em> <strong>{frontmatter.date}</strong>
+						<em>publicado el </em> {frontmatter.date}
 					</small>
 					<p>{frontmatter.excerpt}</p>
 					<br />
@@ -44,6 +44,7 @@ export const query = graphql`
 					frontmatter {
 						title
 						date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
+						author
 						path
 						tags
 						excerpt

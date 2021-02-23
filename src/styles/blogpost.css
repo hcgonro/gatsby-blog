@@ -1,0 +1,25 @@
+.post-container {
+    font-family: Roboto;
+}
+
+.post-title {
+    background: #107dac;
+    color: #FFFFFF;
+    padding: 6vw;
+}
+
+.post-title h1 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-bottom: 3vw;
+}
+
+.post-author-date {
+    font-size: 4vw;
+    display: flex;
+}
+
+.post-author-date a {
+    color: #a7cdde;
+    margin: 0;
+}
