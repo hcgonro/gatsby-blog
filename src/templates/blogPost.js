@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Header from "../components/header"
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import "../styles/blogpost.css"
 
 const Template = ({ data, pageContext }) => {
+	deckDeckGoHighlightElement();
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
 	const author = data.markdownRemark.frontmatter.author;

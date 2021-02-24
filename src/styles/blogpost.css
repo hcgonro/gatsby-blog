@@ -33,3 +33,8 @@
     width: 100%;
     height: auto;
 }
+
+.deckgo-highlight-code-carbon {
+    margin: 6vw 3vw;
+    --deckgo-highlight-code-carbon-toolbar-display: none;
+}
