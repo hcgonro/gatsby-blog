@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import "../styles/header.css"
 
-//{siteTitle}
-
 const Header = (props) => {
 
   const titleArray = (props.siteTitle).split(" ");

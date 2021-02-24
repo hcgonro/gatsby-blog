@@ -1,38 +1,17 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PostList from "../components/postList"
 
-//data es un prop (propiedad) que contiene el resultado del query de graphql. 
-//No se define porque viene por defecto
 const IndexPage = ({ data }) => {
-  //edges contiene un array con dos objetos "node", con la información del .md
-  const {edges} = data.allMarkdownRemark;
-  
   return (
     <Layout>
       <SEO title="El developer ocupado" lang="es" description="Blog de desarrollo de software"/>
-      <div>
-        {edges.map(edge => {
-			const { frontmatter } = edge.node
-			return (
-				<div key={frontmatter.path}>
-					<Link to={frontmatter.path}>{frontmatter.title}</Link>
-					<br />
-					<small>
-						{' '}
-						<em>publicado el </em> {frontmatter.date}
-					</small>
-					<p>{frontmatter.excerpt}</p>
-					<br />
-				</div>
-			);
-        })}
-      </div>
+      <PostList data={data} />
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
 	query HomePageQuery {
@@ -53,6 +32,6 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`
 
 export default IndexPage
