@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import "../styles/postList.css"
 
 const PostList = ({ data }) => {
     
@@ -10,15 +11,15 @@ const PostList = ({ data }) => {
             {edges.map(edge => {
                 const { frontmatter } = edge.node
                 return (
-                    <div key={frontmatter.path}>
-                        <Link to={frontmatter.path}>{frontmatter.title}</Link>
-                        <br />
-                        <small>
-                            {' '}
-                            <em>publicado el </em> {frontmatter.date}
-                        </small>
-                        <p>{frontmatter.excerpt}</p>
-                        <br />
+                    <div className="postList-container">
+                        <Link to={frontmatter.path} key={frontmatter.path}>
+                            <div className="postList-title">{frontmatter.title}</div>
+                            <small className="postList-date">
+                                {frontmatter.date}&nbsp;|&nbsp;{frontmatter.tags.join(", ")}
+                            </small>
+                            <p>{frontmatter.excerpt}</p>
+                            <br />
+                        </Link>
                     </div>
                 )
             })}

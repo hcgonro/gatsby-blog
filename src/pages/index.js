@@ -22,7 +22,7 @@ export const query = graphql`
 					id
 					frontmatter {
 						title
-						date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
+						date(formatString: "DD-MM-YYYY")
 						author
 						path
 						tags

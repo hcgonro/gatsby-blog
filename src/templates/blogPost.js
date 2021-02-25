@@ -18,7 +18,7 @@ const Template = ({ data }) => {
 			<div className="post-container">
 				<div className="post-title">
 					<h1>{title}</h1>
-					<div className="post-author-date"><Link to="/">{author}</Link><em>, {date}</em></div>
+					<div className="post-author-date"><Link to="/">{author}</Link><em>&nbsp;&nbsp;{date}</em></div>
 				</div>
 				<div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
 				<PostList data={data}/>
@@ -33,7 +33,7 @@ export const postQuery = graphql`
 			html
 			frontmatter {
 				title
-				date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
+				date(formatString: "DD-MM-YYYY")
 				author
 				path
 				tags
@@ -52,7 +52,7 @@ export const postQuery = graphql`
 					id
 					frontmatter {
 						title
-						date(formatString: "DD [de]  MMMM [de] YYYY", locale: "es")
+						date(formatString: "DD-MM-YYYY")
 						author
 						path
 						tags

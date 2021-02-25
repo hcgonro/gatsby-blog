@@ -1,0 +1,22 @@
+.postList-container {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    margin: 4vw;
+    padding: 3vw;
+    background: #F9F6EE;
+}
+
+.postList-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.postList-title {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.postList-date {
+    color: gray;
+    font-size: .75em;
+}
