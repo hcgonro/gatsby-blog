@@ -1,11 +1,17 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Header from "../components/header"
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-import "../styles/blogpost.css"
-import PostList from "../components/postList"
 
-const Template = ({ data }) => {
+import { graphql, Link } from 'gatsby';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
+import Header from "../components/header"
+import PostFooter from "../components/postFooter"
+
+import "../styles/blogpost.css"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+
+const Template = ({ data, pageContext }) => {
 	deckDeckGoHighlightElement();
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
@@ -18,10 +24,11 @@ const Template = ({ data }) => {
 			<div className="post-container">
 				<div className="post-title">
 					<h1>{title}</h1>
-					<div className="post-author-date"><Link to="/">{author}</Link><em>&nbsp;&nbsp;{date}</em></div>
+					<div className="post-author-date"><FontAwesomeIcon icon={faUser} />&nbsp;<Link to="/">{author}</Link>
+					&nbsp;&nbsp;&nbsp;<FontAwesomeIcon icon={faCalendarAlt} />&nbsp;{date}</div>
 				</div>
 				<div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
-				<PostList data={data}/>
+				<PostFooter pageContext={pageContext}/>
 			</div>
 		</>
 	)

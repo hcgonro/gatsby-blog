@@ -5,6 +5,7 @@ title: 'Crear un .jar con parámetros personalizados'
 author: 'El developer ocupado'
 tags: ['gatsby', '2018']
 excerpt: 'Hello World with Gatsby and React'
+image: 'http://drive.google.com/uc?export=view&id=11lZjN9Jbr4mkB7fCQCoGWLzZ1GFjPu5n'
 ---
 
 

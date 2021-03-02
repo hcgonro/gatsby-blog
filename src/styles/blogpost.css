@@ -35,6 +35,8 @@
 }
 
 .deckgo-highlight-code-carbon {
-    margin: 6vw 3vw;
+    margin: 6vw 1vw;
     --deckgo-highlight-code-carbon-toolbar-display: none;
+    box-shadow: var(--deckgo-highlight-code-carbon-box-shadow, rgba(0, 0, 0, 0.55) 0 2px 4px);
+    background: #f5f1ff;
 }

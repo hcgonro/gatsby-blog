@@ -5,6 +5,7 @@
 .header-container {
     margin: 0;
     padding: 1.5em;
+    font-family: Ubuntu;
 }
 
 .header-container h1 {
@@ -13,7 +14,6 @@
 
 .header-link {
     text-decoration: none;
-    font-family: Ubuntu;
     display: flex;
     font-size: 6vw;
 }
@@ -28,4 +28,15 @@
 
 .link-2 {
     color: #FF7F50;
+}
+
+.header-by {
+    color: white;
+    margin-top: .3em;
+    font-size: .8em;
+}
+
+.header-by a {
+    text-decoration: underline;
+    color: white;
 }

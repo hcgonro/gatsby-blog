@@ -3,7 +3,7 @@
     border-radius: 4px;
     margin: 4vw;
     padding: 3vw;
-    background: #F9F6EE;
+    background: #eeeeee;
 }
 
 .postList-container a {
@@ -19,4 +19,21 @@
 .postList-date {
     color: gray;
     font-size: .75em;
+}
+
+.postFooter-title {
+    padding: 0 6vw;
+    color: gray;
+}
+
+.postList-image-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.postList-image-group img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    margin-right: 3vw;
 }
