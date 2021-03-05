@@ -37,3 +37,17 @@
     height: 65px;
     margin-right: 3vw;
 }
+
+.postList-showMore {
+    text-align: center;
+}
+
+.postList-showMore button {
+    padding: 2vw 7vw;
+    margin-top: 3vw;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    background: #d1caca;
+}

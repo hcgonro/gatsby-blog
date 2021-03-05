@@ -19,7 +19,6 @@ const Header = (props) => {
     <header className="header-class" >
       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"></link>
-      <script src="https://kit.fontawesome.com/922788a379.js" crossorigin="anonymous"></script>
       <div className="header-container" >
         <h1>
           <Link to="/" className="header-link" >
