@@ -56,4 +56,10 @@
     .post-title {
         padding: 1.5rem 8rem;
     }
+    .blog-post img {
+        max-width: 600px;
+        max-height: 400px;
+        margin: 0 auto;
+        display: block;
+    }
 }
