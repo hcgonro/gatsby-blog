@@ -14,14 +14,21 @@ import { faUser, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Template = ({ data, pageContext }) => {
 	deckDeckGoHighlightElement();
-	const title = data.markdownRemark.frontmatter.title;
-	const date = data.markdownRemark.frontmatter.date;
-	const author = data.markdownRemark.frontmatter.author;
-	const html = data.markdownRemark.html;
+	const title = data.markdownRemark.frontmatter.title
+	const date = data.markdownRemark.frontmatter.date
+	const author = data.markdownRemark.frontmatter.author
+	const html = data.markdownRemark.html
+	const excerpt = data.markdownRemark.excerpt
+	const image = data.markdownRemark.image
 
 	return (
 		<>
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@hectorCodes" />
+			<meta name="twitter:title" content={title} />
+			<meta name="twitter:description" content={excerpt}/>
+			<meta name="twitter:image" content={image} />
 			<div className="post-container">
 				<div className="post-title">
 					<h1>{title}</h1>
