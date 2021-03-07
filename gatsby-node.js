@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
 										excerpt
 										title
 										tags
+										image
 									}
 								}
 							}

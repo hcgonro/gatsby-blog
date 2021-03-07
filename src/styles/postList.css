@@ -1,14 +1,24 @@
 .postList-container {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
-    margin: 4vw;
-    padding: 3vw;
+    margin: 1rem;
+    padding: 1rem;
     background: #eeeeee;
+    pointer-events: none;
 }
 
 .postList-container a {
     text-decoration: none;
     color: black;
+    pointer-events: auto;
+}
+
+.postList-container:hover{
+    background: #d1caca;
+}
+
+.postList-container p {
+    font-weight: 300;
 }
 
 .postList-title {
@@ -22,7 +32,7 @@
 }
 
 .postFooter-title {
-    padding: 0 6vw;
+    padding: 0 1rem;
     color: gray;
 }
 
@@ -32,22 +42,44 @@
 }
 
 .postList-image-group img {
-    border-radius: 50%;
+    border-radius: 5px;
     width: 65px;
-    height: 65px;
-    margin-right: 3vw;
+    height: auto;
+    margin-right: 1rem;
 }
 
 .postList-showMore {
     text-align: center;
 }
 
+
 .postList-showMore button {
-    padding: 2vw 7vw;
-    margin-top: 3vw;
-    font-size: 1.1em;
-    font-weight: 500;
-    border: none;
+    padding: .6rem 2rem;
+    margin-top: 1rem;
+    font-size: .8rem;
+    font-weight: 300;
+    border: 1px solid #d1caca;
     border-radius: 20px;
-    background: #d1caca;
+    background: #eeeeee;
+    color: gray;
+    cursor: pointer;
+}
+
+.postList-showMore button:hover {
+    background: #107dac;
+    color: white;
+}
+
+.postList-showMore button:focus {
+    border-radius: 0;
+}
+
+@media (min-width: 1024px) {
+    .postList-container {
+        margin: 1.5rem 8rem;
+        padding: 1rem;
+    }
+    .postFooter-title {
+        padding: 0 8rem;
+    }
 }

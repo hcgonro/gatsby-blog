@@ -5,13 +5,13 @@
 .post-title {
     background: #107dac;
     color: #FFFFFF;
-    padding: 6vw;
+    padding: 1.5rem;
 }
 
 .post-title h1 {
     font-size: 1.3em;
     margin: 0;
-    padding-bottom: 3vw;
+    padding-bottom: 1rem;
 }
 
 .post-author-date {
@@ -24,9 +24,18 @@
     margin: 0;
 }
 
+.post-author-date a:hover {
+    color: white;
+}
+
 .blog-post {
-    padding: 6vw;
+    padding: 1.5rem;
     line-height: 1.4;
+    font-weight: 300;
+}
+
+.blog-post a:hover {
+    color: #a7cdde;
 }
 
 .blog-post img {
@@ -35,8 +44,16 @@
 }
 
 .deckgo-highlight-code-carbon {
-    margin: 6vw 1vw;
     --deckgo-highlight-code-carbon-toolbar-display: none;
     box-shadow: var(--deckgo-highlight-code-carbon-box-shadow, rgba(0, 0, 0, 0.55) 0 2px 4px);
     background: #f5f1ff;
+}
+
+@media (min-width: 1024px) {
+    .blog-post {
+        padding: 1.5rem 8rem;
+    }
+    .post-title {
+        padding: 1.5rem 8rem;
+    }
 }

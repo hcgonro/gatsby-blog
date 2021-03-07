@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import React from "react"
 import "../styles/header.css"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 const Header = (props) => {
 
   const titleArray = (props.siteTitle).split(" ");
@@ -25,7 +28,7 @@ const Header = (props) => {
             {listItems}
           </Link>
         </h1>
-        <p className="header-by">by <a href="https://twitter.com/hectorCodes">@hectorCodes</a></p>
+        <p className="header-by">by <a href="https://twitter.com/hectorCodes">@hectorCodes <FontAwesomeIcon icon={faTwitter} /></a></p>
       </div>
     </header>
     )

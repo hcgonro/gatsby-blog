@@ -5,6 +5,7 @@ import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/
 
 import Header from "../components/header"
 import PostFooter from "../components/postFooter"
+import Footer from "../components/footer"
 
 import "../styles/blogpost.css"
 
@@ -30,6 +31,7 @@ const Template = ({ data, pageContext }) => {
 				<div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
 				<PostFooter pageContext={pageContext}/>
 			</div>
+			<Footer />
 		</>
 	)
 }
