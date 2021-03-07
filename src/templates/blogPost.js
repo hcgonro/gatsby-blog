@@ -19,19 +19,19 @@ const Template = ({ data, pageContext }) => {
 	const date = data.markdownRemark.frontmatter.date
 	const author = data.markdownRemark.frontmatter.author
 	const html = data.markdownRemark.html
-	const excerpt = data.markdownRemark.excerpt
-	const image = data.markdownRemark.image
+	const excerpt = data.markdownRemark.frontmatter.excerpt
+	const image = data.markdownRemark.frontmatter.image
 
 	const meta = {
 		title: title,
 		meta: {
-			property: {
+			name: {
 				'twitter:card': 'summary_large_image',
 				'twitter:site': '@hectorCodes',
 				'twitter:creator': '@hectorCodes',
 				'twitter:title': title,
 				'twitter:description': excerpt,
-				'twitter:image': image
+				'twitter:image': image,
 			}
 		}
 	}
@@ -65,6 +65,7 @@ export const postQuery = graphql`
 				path
 				tags
 				excerpt
+				image
 			}
 		}
 		site {
@@ -84,6 +85,7 @@ export const postQuery = graphql`
 						path
 						tags
 						excerpt
+						image
 					}
 				}
 			}
