@@ -1,4 +1,5 @@
 import React from 'react';
+import DocumentMeta from 'react-document-meta';
 
 import { graphql, Link } from 'gatsby';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
