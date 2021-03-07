@@ -1,5 +1,4 @@
 import React from 'react';
-import DocumentMeta from 'react-document-meta';
 
 import { graphql, Link } from 'gatsby';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -7,6 +6,7 @@ import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/
 import Header from "../components/header"
 import PostFooter from "../components/postFooter"
 import Footer from "../components/footer"
+import SEO from "../components/seo"
 
 import "../styles/blogpost.css"
 
@@ -22,23 +22,9 @@ const Template = ({ data, pageContext }) => {
 	const excerpt = data.markdownRemark.frontmatter.excerpt
 	const image = data.markdownRemark.frontmatter.image
 
-	const meta = {
-		title: title,
-		meta: {
-			name: {
-				'twitter:card': 'summary_large_image',
-				'twitter:site': '@hectorCodes',
-				'twitter:creator': '@hectorCodes',
-				'twitter:title': title,
-				'twitter:description': excerpt,
-				'twitter:image': image,
-			}
-		}
-	}
-
 	return (
 		<>
-			<DocumentMeta {...meta} />
+			<SEO lang="es" title={title} description={excerpt} image={image} />
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<div className="post-container">
 				<div className="post-title">
