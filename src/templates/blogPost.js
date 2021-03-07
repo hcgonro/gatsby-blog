@@ -21,14 +21,24 @@ const Template = ({ data, pageContext }) => {
 	const excerpt = data.markdownRemark.excerpt
 	const image = data.markdownRemark.image
 
+	const meta = {
+		title: title,
+		meta: {
+			property: {
+				'twitter:card': 'summary_large_image',
+				'twitter:site': '@hectorCodes',
+				'twitter:creator': '@hectorCodes',
+				'twitter:title': title,
+				'twitter:description': excerpt,
+				'twitter:image': image
+			}
+		}
+	}
+
 	return (
 		<>
+			<DocumentMeta {...meta} />
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@hectorCodes" />
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={excerpt}/>
-			<meta name="twitter:image" content={image} />
 			<div className="post-container">
 				<div className="post-title">
 					<h1>{title}</h1>
