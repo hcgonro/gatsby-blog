@@ -1,0 +1,11 @@
+# Google
+User-agent: Googlebot
+Allow: /
+
+#Twitter
+User-agent: Twitterbot
+Allow: /
+
+#Others
+User-agent: *
+Disallow: /
