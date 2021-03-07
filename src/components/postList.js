@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faTags } from '@fortawesome/free-solid-svg-icons'
 
 //Global variables
-const postsShowed = 2
+const postsShowed = 10
 
 const PostList = ({ data }) => {
     
