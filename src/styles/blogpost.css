@@ -49,6 +49,18 @@
     background: #f5f1ff;
 }
 
+.image-title-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-title-group  img{
+    border-radius: 5px;
+    width: 65px;
+    height: auto;
+    margin-right: 1rem;
+}
+
 @media (min-width: 1024px) {
     .blog-post {
         padding: 1.5rem 8rem;

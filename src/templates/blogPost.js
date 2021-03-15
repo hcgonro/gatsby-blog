@@ -28,9 +28,14 @@ const Template = ({ data, pageContext }) => {
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<div className="post-container">
 				<div className="post-title">
-					<h1>{title}</h1>
-					<div className="post-author-date"><FontAwesomeIcon icon={faUser} />&nbsp;<Link to="/">{author}</Link>
-					&nbsp;&nbsp;&nbsp;<FontAwesomeIcon icon={faCalendarAlt} />&nbsp;{date}</div>
+					<div className="image-title-group">
+						<img alt="" src={image}></img>
+						<div>
+							<h1>{title}</h1>
+							<div className="post-author-date"><FontAwesomeIcon icon={faUser} />&nbsp;<Link to="/">{author}</Link>
+							&nbsp;&nbsp;&nbsp;<FontAwesomeIcon icon={faCalendarAlt} />&nbsp;{date}</div>
+						</div>
+					</div>
 				</div>
 				<div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
 				<PostFooter pageContext={pageContext}/>

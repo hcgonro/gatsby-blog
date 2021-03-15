@@ -1,9 +1,9 @@
 footer {
     background: #252525;
     color: white;
-    padding: 0 1em 1em 1em;
     text-align: center;
     font-family: Ubuntu;
+    padding-bottom: 1rem;
 }
 
 .social-container ul {
@@ -35,4 +35,18 @@ footer {
 
 .footer-reference a {
     color: white;
+}
+
+@media (min-width: 1024px) {
+    .social-github:hover {
+        background: #739c4c;
+    }
+
+    .social-twitter:hover {
+        background: #63a6c5;
+    }
+
+    .footer-reference a:hover {
+        color: rgb(214, 207, 207);
+    }
 }
