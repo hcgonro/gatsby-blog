@@ -70,7 +70,7 @@
     }
     .blog-post img {
         max-width: 600px;
-        max-height: 400px;
+        max-height: auto;
         margin: 0 auto;
         display: block;
     }
