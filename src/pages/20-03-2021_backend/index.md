@@ -42,4 +42,5 @@ Personalmente recomiendo acceder a [FreeCodeCamp.org](https://www.freecodecamp.o
 Cuando nos queramos centrar en el Backend, tenemos muchas opciones como Java, C, PHP además de JavaScript (entre otras) para desarrollar nuestras aplicaciones.
 
 ---
-Un saludo y nos vemos en la red :)
+
+##### Un saludo y nos vemos en la red :)
